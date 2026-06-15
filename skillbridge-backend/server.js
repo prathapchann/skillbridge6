@@ -23,6 +23,8 @@ app.use("/api/users", require("./routes/studentRoutes"));
 
 const PORT = 3000;
 
+app.get('/',()=>{console.log("tested")})
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
