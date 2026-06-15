@@ -5,7 +5,7 @@ const connectDB = async () => {
     try {
 
         await mongoose.connect(
-            "mongodb://127.0.0.1:27017/skillbridge"
+            "mongodb+srv://prathap:abcd@bridge.ketqs4o.mongodb.net/?appName=bridge"
         );
 
         console.log("MongoDB Connected");
