@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
 function Matches() {
 
@@ -11,7 +12,7 @@ function Matches() {
     try {
 
       const res = await axios.get(
-        `http://localhost:3000/api/users/matches/${skill}`
+        `${API_BASE_URL}/matches/${skill}`
       );
 
       setUsers(res.data);
