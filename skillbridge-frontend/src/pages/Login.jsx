@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
 function Login() {
 
@@ -19,7 +20,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "http://localhost:3000/api/users/login",
+        `${API_BASE_URL}/login`,
         {
           email,
           password
