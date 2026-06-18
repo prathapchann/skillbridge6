@@ -36,6 +36,9 @@ try {
 
   await axios.post(
     `${API_BASE_URL}/register`,
+    {
+      name,
+      email,
       password,
       contactNumber,
       skillOffered,
