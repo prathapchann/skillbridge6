@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
 function Dashboard() {
 
@@ -34,10 +35,7 @@ if (
 try {
 
   await axios.post(
-    "http://localhost:3000/api/users/register",
-    {
-      name,
-      email,
+    `${API_BASE_URL}/register`,
       password,
       contactNumber,
       skillOffered,
